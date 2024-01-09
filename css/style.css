@@ -1,0 +1,11 @@
+.classe-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.stile{
+    background: aqua;
+    padding: 50px;
+}

@@ -12,27 +12,27 @@
 <body>
     
     <div id="app">
-        <div>
+        <div class="classe-flex m-5 stile">
                 <input type="text" @keyup.enter="submit" v-model="newTodo" placeholder="Cosa vuoi fare?">
 
-                <button @click="addTodo()">
+                <button @click="addTodo()" class="m-2">
                         Aggiungi in lista
                 </button>
         </div>
 
-        <div>
-                <ul v-if="todos.length > 0">
+        <div class="classe-flex">
+                <ul v-if="todos.length > 0" class="stile">
                         <li v-for="(singleToDo, indiceDelTodo) in todos">
                             <span :class="singleToDo.done == true ? 'text-decoration-line-through':'' ">
                                 {{singleToDo.text}}
                             </span>
 
-                                <button @click="removeTodo(indiceDelTodo)">
+                                <button @click="removeTodo(indiceDelTodo)" class="text-danger p-1 m-2">
                                         X
                                 </button>
                         </li>
                 </ul>
-                <p v-else>
+                <p v-else class="fs-1">
                         Non ci sono task
                 </p>
         </div>
