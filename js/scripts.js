@@ -40,6 +40,17 @@ createApp ({
         removeTodo(i) {
             console.log(i, this.todos[i]);
             this.todos.splice(i, 1);
+        },
+        submit(){
+            console.log('quiiiiiii')
+            if (this.newTodo.trim().length > 0) {
+                let newElem={};
+                newElem.text = this.newTodo;
+                newElem.done = false
+                this.todos.push(newElem);
+                this.newTodo= '';
+            }
         }
+        
     }
 }).mount('#app');
